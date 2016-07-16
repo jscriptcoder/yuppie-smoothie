@@ -1,75 +1,75 @@
 [
-    {
-        "name": "apple",
-        "type": "fruit",
-	"amount": 30,
-        "nutritions": {
-            "sugar": 50,
-            "vitaminC": 15
-	}
-    },
-    {
-        "name": "banana",
-        "type": "fruit",
-	"amount": 20,
-        "nutritions": {
-            "sugar": 40,
-            "vitaminC": 50
-	}
-    },
-    {
-        "name": "kiwi",
-        "type": "fruit",
-	"amount": 40,
-        "nutritions": {
-            "sugar": 80,
-            "vitaminC": 50
-	}
-    },
-    {
-        "name": "orange",
-        "type": "fruit",
-	"amount": 40,
-        "nutritions": {
-            "sugar": 50,
-            "vitaminC": 15
-	}
-    },
-    {
-        "name": "lemon",
-        "type": "fruit",
-	"amount": 20,
-        "nutritions": {
-            "sugar": 5,
-            "vitaminC": 25
-	}
-    },
-    {
-        "name": "carrot",
-        "type": "vegetable",
-	"amount": 30,
-        "nutritions": {
-            "vitaminC": 15,
-            "fiber": 200,
-            "iron": 75
-	}
-    },
-    {
-        "name": "celery",
-        "type": "vegetable",
-	"amount": 30,
-        "nutritions": {
-            "iron": 5,
-            "fiber": 500
-	}
-    },
-    {
-        "name": "spinach",
-        "type": "vegetable",
-	"amount": 20,
-        "nutritions": {
-            "iron": 500,
-            "fiber": 200
-	}
+  {
+    "name": "apple",
+    "type": "fruit",
+    "amount": 30,
+    "nutritions": {
+      "sugar": 50,
+      "vitaminC": 15
     }
+  },
+  {
+    "name": "banana",
+    "type": "fruit",
+    "amount": 20,
+    "nutritions": {
+      "sugar": 40,
+      "vitaminC": 50
+    }
+  },
+  {
+    "name": "kiwi",
+    "type": "fruit",
+    "amount": 40,
+    "nutritions": {
+      "sugar": 80,
+      "vitaminC": 50
+    }
+  },
+  {
+    "name": "orange",
+    "type": "fruit",
+    "amount": 40,
+    "nutritions": {
+      "sugar": 50,
+      "vitaminC": 15
+    }
+  },
+  {
+    "name": "lemon",
+    "type": "fruit",
+    "amount": 20,
+    "nutritions": {
+      "sugar": 5,
+      "vitaminC": 25
+    }
+  },
+  {
+    "name": "carrot",
+    "type": "vegetable",
+    "amount": 30,
+    "nutritions": {
+      "vitaminC": 15,
+      "fiber": 200,
+      "iron": 75
+    }
+  },
+  {
+    "name": "celery",
+    "type": "vegetable",
+    "amount": 30,
+    "nutritions": {
+      "iron": 5,
+      "fiber": 500
+    }
+  },
+  {
+    "name": "spinach",
+    "type": "vegetable",
+    "amount": 20,
+    "nutritions": {
+      "iron": 500,
+      "fiber": 200
+    }
+  }
 ]
