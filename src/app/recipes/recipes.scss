@@ -5,6 +5,12 @@
 	.actions {
 		display: flex;
 		justify-content: space-between;
+		padding: 0 10px;
+
+		md-button {
+			height: 38px;
+    		margin-top: 10px;
+		}
 	}
 
 	.list-recipes {
@@ -17,6 +23,11 @@
 		border-radius: 4px;
 		margin: 10px;
 		background-color: #E3F2FD;
+
+		a {
+			color: $link-color;
+			text-decoration: none;
+		}
 
 		ul {
 			list-style: none;

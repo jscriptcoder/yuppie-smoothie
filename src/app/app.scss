@@ -7,6 +7,10 @@ md-sidenav-layout {
 
 md-sidenav {
 	width: 200px;
+
+	md-toolbar {
+		background-color: $product-bgcolor;
+	}
 }
 
 header {
@@ -20,6 +24,7 @@ header {
 
 main {
 	padding: 20px;
+	overflow: hidden;
 }
 
 footer {

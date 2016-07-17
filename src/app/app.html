@@ -1,6 +1,11 @@
 <md-sidenav-layout>
 
   <md-sidenav mode="side" [opened]="menuOpened">
+
+  <md-toolbar>
+    <h3>Smoothie time</h3>
+  </md-toolbar>
+
     <md-nav-list>
       <md-list-item [routerLink]="['/']">Home</md-list-item>
       <md-list-item [routerLink]="['/types']">Types</md-list-item>
