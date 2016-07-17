@@ -5,9 +5,9 @@ var path = require('path');
 // Webpack Config
 var webpackConfig = {
   entry: {
-    'polyfills': './src/polyfills.browser.ts',
-    'vendor':    './src/vendor.browser.ts',
-    'main':       './src/main.browser.ts',
+    'polyfills': './src/polyfills.ts',
+    'vendor':    './src/vendor.ts',
+    'main':      './src/main.ts',
   },
 
   output: {
@@ -21,12 +21,11 @@ var webpackConfig = {
 
   module: {
     loaders: [
-      // .ts files for TypeScript
-      { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
-      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.json$/, loader: 'json-loader' },
-
+      { test: /\.ts$/, loaders: ['awesome-typescript', 'angular2-template'] },
+      { test: /^((?!main).)*\.scss$/, loaders: ['to-string', 'css', 'resolve-url', 'sass'] },
+      { test: /main\.scss$/, loaders: ['style', 'css', 'resolve-url', 'sass'] },
+      { test: /\.html$/, loader: 'raw' },
+      { test: /\.json$/, loader: 'json' },
     ]
   }
 
@@ -39,7 +38,7 @@ var defaultConfig = {
   cache: true,
   debug: true,
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
   },

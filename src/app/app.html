@@ -1,25 +1,26 @@
-<h3>
-  Yuppie Smoothie
-</h3>
-<nav>
-	<a [routerLink]="['/']">
-    Home
-  </a>
-  |
-	<a [routerLink]="['/about']">
-    About
-  </a>
-  |
-	<a [routerLink]="['/github', 'angular']">
-    Github Repos
-  </a>
-</nav>
+<md-sidenav-layout>
 
-<main>
-	<router-outlet></router-outlet>
-</main>
+  <md-sidenav mode="side" [opened]="menuOpened">
+    <md-nav-list>
+      <md-list-item [routerLink]="['/']">Home</md-list-item>
+      <md-list-item [routerLink]="['/types']">Types</md-list-item>
+      <md-list-item [routerLink]="['/nutrition']">Nutrition</md-list-item>
+      <md-list-item [routerLink]="['/products']">Products</md-list-item>
+      <md-list-item [routerLink]="['/recipes']">Recipes</md-list-item>
+    </md-nav-list>
+  </md-sidenav>
 
+  <header>
+    <md-toolbar>
+      <button md-icon-button (click)="toggleMenu()">
+        <md-icon>menu</md-icon>
+      </button>
+      <span>Yuppie Smoothie</span>
+    </md-toolbar>
+  </header>
 
-<footer>
-  © 2016
-</footer>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+</md-sidenav-layout>

@@ -1,0 +1,19 @@
+@import '../../vars';
+
+:host {
+
+	.list-products {
+		width: 250px;
+		border-right: 3px solid;
+		border-color: $separator-color;
+    	padding-right: 20px;
+
+		md-input { width: 100%; }
+
+		md-card {
+			margin-bottom: 20px;
+			background-color: $product-bgcolor;
+		}
+	}
+
+}

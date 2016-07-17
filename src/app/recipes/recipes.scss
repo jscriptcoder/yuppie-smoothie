@@ -1,0 +1,27 @@
+@import '../vars';
+
+:host {
+
+	.actions {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.list-recipes {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	md-card {
+		width: 250px;
+		border-radius: 4px;
+		margin: 10px;
+		background-color: #E3F2FD;
+
+		ul {
+			list-style: none;
+			padding-left: 10px;
+		}
+	}
+
+}

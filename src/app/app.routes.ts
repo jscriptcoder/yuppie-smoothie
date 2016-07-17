@@ -1,22 +1,20 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import {About} from './about/about';
-import {Home} from './home/home';
-import {RepoBrowser} from './github/repo-browser/repo-browser';
-import {RepoList} from './github/repo-list/repo-list';
-import {RepoDetail} from './github/repo-detail/repo-detail';
+import { Home } from './home/home';
+import { Types } from './types/types';
+import { Nutrition } from './nutrition/nutrition';
+import { Products } from './products/products';
+import { Recipes } from './recipes/recipes';
+import { Recipe } from './recipes/recipe/recipe';
 
 const routes: RouterConfig = [
   { path: '', redirectTo: 'home', terminal: true },
   { path: 'home', component: Home },
-  { path: 'about', component: About },
-  { path: 'github', component: RepoBrowser, children: [
-    { path: ':org', component: RepoList, children: [
-      { path: ':repo', component: RepoDetail },
-      { path: '', component: RepoDetail }
-    ]},
-    { path: '', component: RepoList}
-  ]}
+  { path: 'types', component: Types },
+  { path: 'nutrition', component: Nutrition },
+  { path: 'products', component: Products },
+  { path: 'recipes', component: Recipes },
+  { path: 'recipes/recipe', component: Recipe },
 ];
 
 export const APP_ROUTER_PROVIDERS = [
