@@ -5,7 +5,7 @@ import { MD_INPUT_DIRECTIVES } from '@angular2-material/input';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import { MD_GRID_LIST_DIRECTIVES } from '@angular2-material/grid-list';
 import { DND_PROVIDERS, DND_DIRECTIVES } from 'ng2-dnd/ng2-dnd';
-import { BackendService, Product } from '../../../backend/backend';
+import { BackendService, Product, Nutrition } from '../../../backend/backend';
 
 @Component({
   selector: 'recipe',
@@ -31,4 +31,8 @@ export class Recipe {
 			this.backendProducts = products;
 		});
 	}
+
+  getNutritionKeys(nutrition: Nutrition) {
+    return Object.keys(nutrition);
+  }
 }
