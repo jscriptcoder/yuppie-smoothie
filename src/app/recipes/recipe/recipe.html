@@ -1,38 +1,106 @@
-<div class="list-products">
+<div class="line">
   
-  <div class="search">
-
-    <md-input placeholder="e.g. apple, vegetable...">
-      <span md-suffix>
-        <md-icon>search</md-icon>
-      </span>
-    </md-input>
-
-  </div>
-
-  <div class="products">
+  <div class="unit size1of3">
     
-    <md-card dnd-draggable [dragEnabled]="true" *ngFor="let product of backendProducts">
-      <md-card-title-group>
-        <img md-card-sm-image src="assets/image/apple.jpg">
-        <md-card-title>
-          <strong>{{ product.name }}</strong> - <em>{{ product.type }}</em>
-        </md-card-title>
-        <md-card-subtitle>
-          <table>
-            <tr *ngFor="let nutritionKey of getNutritionKeys(product.nutritions)">
-              <td>{{ nutritionKey }}</td>
-              <td>{{ product.nutritions[nutritionKey] }}</td>
-            </tr>
-          </table>
-        </md-card-subtitle>
-      </md-card-title-group>
-    </md-card>
+    <div class="list-products">
+      
+      <div class="search">
+
+        <md-input placeholder="e.g. apple, vegetable...">
+          <span md-suffix>
+            <md-icon>search</md-icon>
+          </span>
+        </md-input>
+
+      </div>
+
+      <div class="products">
+        
+        <md-card dnd-draggable [dragEnabled]="true" [dragData]="product" *ngFor="let product of backendProducts">
+          <md-card-title-group>
+            <img md-card-sm-image src="assets/image/{{product.image}}">
+            <md-card-title>
+              <strong>{{ product.name }}</strong> - <em>{{ product.type }}</em>
+            </md-card-title>
+            <md-card-subtitle>
+              <table>
+                <tr *ngFor="let nutritionKey of getObjectKeys(product.nutritions)">
+                  <td>{{ nutritionKey }}</td>
+                  <td>{{ product.nutritions[nutritionKey] }}</td>
+                </tr>
+              </table>
+            </md-card-subtitle>
+          </md-card-title-group>
+        </md-card>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="unit size2of3 lastUnit">
+    
+    <div class="recipe">
+      
+      <div class="line">
+        
+        <div class="unit size1of2">
+
+          <div class="line">
+            <md-input placeholder="Recipe name..."></md-input>
+          </div>
+
+          <div class="line">
+            <div class="glass-wrapper" dnd-droppable (onDropSuccess)="productTransferSuccess($event)">
+              <ul class="products-recipe">
+                <li *ngFor="let prodRecipe of products">
+                  <span>{{prodRecipe.quantity}} {{prodRecipe.product.name}}</span>
+                  <md-icon (click)="deleteProduct(prodRecipe.product.name)">delete</md-icon>
+                </li>
+              </ul>
+              <img class="glass" src="assets/image/glass.svg" />
+            </div>
+          </div>
+
+        </div>
+        <div class="unit size1of2 lastUnit details">
+
+          <div class="line">
+            
+            <table class="nutritional-value md-elevation-z1">
+              <thead>
+                <th colspan="2">Nutritional Value</th>
+              </thead>
+              <tr *ngFor="let nutritionKey of getObjectKeys(nutritionValue)">
+                <td>{{nutritionKey}}</td>
+                <td>{{nutritionValue[nutritionKey]}}</td>
+              </tr>
+            </table>
+
+          </div>
+
+          <div class="line">
+            
+            <div class="actions">
+
+              <md-button md-raised-button [routerLink]="['/recipes']">
+                Cancel
+              </md-button>
+
+              <md-button md-raised-button [routerLink]="['/recipes']">
+                Save
+              </md-button>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
-</div>
-
-<div class="recipe">
-  
 </div>

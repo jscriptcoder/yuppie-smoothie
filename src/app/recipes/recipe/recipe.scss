@@ -3,7 +3,6 @@
 :host {
 
 	.list-products {
-		width: 300px;
 		border-right: 3px solid;
 		border-color: $separator-color;
     	padding-right: 20px;
@@ -11,9 +10,11 @@
 		md-input { width: 100%; }
 
 		md-card {
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			background-color: $product-bgcolor;
 			cursor: move;
+
+			&:last-of-type { margin-bottom: 0; }
 
 			md-grid-list { width: 100px; }
 
@@ -21,6 +22,73 @@
 				list-style: none;
 				padding-left: 10px;
 			}
+		}
+
+		.products {
+			height: 480px;
+    		overflow: auto;
+    		padding: 0 10px;
+		}
+	}
+
+	.recipe {
+		margin-left: 20px;
+
+		md-input {
+			margin-top: 9px;
+			width: 100%;
+		}
+
+		.glass-wrapper {
+			position: relative;
+
+			.glass {
+				width: 400px;
+				height: 500px;
+			}
+
+			.products-recipe {
+			    list-style: none;
+			    position: absolute;
+			    left: 90px;
+			    bottom: 30px;
+			    color: white;
+			    font-weight: bold;
+			    z-index: 1;
+
+				li {
+					padding: 10px;
+					width: 130px;
+
+					md-icon {
+						float: right;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		.nutritional-value {
+			width: 100%;
+    		margin-top: 85px;
+
+			th {
+				background-color: $main-color;
+				color: white;
+				padding: 10px;
+				width: 150px;
+			}
+
+			tr:nth-child(2n) {
+				background-color: #E3F2FD;
+			}
+
+			td { padding: 5px; }
+		}
+
+		.actions {
+			text-align: right;
+			margin-top: 30px;
 		}
 	}
 

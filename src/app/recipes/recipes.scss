@@ -16,22 +16,24 @@
 	.list-recipes {
 		display: flex;
 		flex-wrap: wrap;
-	}
 
-	md-card {
-		width: 250px;
-		border-radius: 4px;
-		margin: 10px;
-		background-color: #E3F2FD;
+		md-card {
+			width: 250px;
+			border-radius: 4px;
+			margin: 10px;
+			background-color: #E3F2FD;
 
-		a {
-			color: $link-color;
-			text-decoration: none;
-		}
+			img { height: 100px; }
 
-		ul {
-			list-style: none;
-			padding-left: 10px;
+			a {
+				color: $link-color;
+				text-decoration: none;
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 10px;
+			}
 		}
 	}
 

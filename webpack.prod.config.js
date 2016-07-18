@@ -27,6 +27,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.ts$/, loaders: ['awesome-typescript', 'angular2-template'] },
+      { test: /\.css$/, loaders: ['style', 'css'] },
       { test: /^((?!main).)*\.scss$/, loaders: ['to-string', 'css', 'resolve-url', 'sass'] },
       { test: /main\.scss$/, loaders: ['style', 'css', 'resolve-url', 'sass'] },
       { test: /\.html$/, loader: 'raw' },

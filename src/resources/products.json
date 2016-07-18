@@ -1,6 +1,7 @@
 [
   {
     "name": "Apple",
+    "image": "fruit.png",
     "type": "Fruit",
     "amount": 30,
     "nutritions": {
@@ -10,6 +11,7 @@
   },
   {
     "name": "Banana",
+    "image": "fruit2.png",
     "type": "Fruit",
     "amount": 20,
     "nutritions": {
@@ -19,6 +21,7 @@
   },
   {
     "name": "Kiwi",
+    "image": "fruit3.png",
     "type": "Fruit",
     "amount": 40,
     "nutritions": {
@@ -28,6 +31,7 @@
   },
   {
     "name": "Orange",
+    "image": "fruit4.png",
     "type": "Fruit",
     "amount": 40,
     "nutritions": {
@@ -37,6 +41,7 @@
   },
   {
     "name": "Lemon",
+    "image": "fruit5.png",
     "type": "fruit",
     "amount": 20,
     "nutritions": {
@@ -46,6 +51,7 @@
   },
   {
     "name": "Carrot",
+    "image": "veggie3.png",
     "type": "Veggie",
     "amount": 30,
     "nutritions": {
@@ -56,6 +62,7 @@
   },
   {
     "name": "Celery",
+    "image": "veggie2.png",
     "type": "Veggie",
     "amount": 30,
     "nutritions": {
@@ -65,6 +72,7 @@
   },
   {
     "name": "Spinach",
+    "image": "veggie.png",
     "type": "Veggie",
     "amount": 20,
     "nutritions": {

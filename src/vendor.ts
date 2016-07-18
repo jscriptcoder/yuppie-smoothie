@@ -1,4 +1,6 @@
 // Vendors
+import '@angular2-material/core/style/core.css';
+import 'ng2-dnd/ng2-dnd.css';
 
 // Angular 2
 import '@angular/platform-browser-dynamic';
