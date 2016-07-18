@@ -19,7 +19,7 @@ module.exports = {
 
   output: {
     path: './build',
-    filename: 'js/[name].bundle.js',
+    filename: '[name].bundle.js',
   },
 
   plugins: [ new HtmlWebpackPlugin({ template: './src/index.html' })],
